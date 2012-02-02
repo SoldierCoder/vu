@@ -9,7 +9,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'multi_json'
 gem 'omniauth-identity'
 gem 'omniauth-twitter'
-#gem 'sinatra'
+gem 'rack'
+gem 'sinatra'
 gem 'twitter'
 
 
