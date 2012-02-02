@@ -1,0 +1,24 @@
+<% title "Campaign" %>
+
+<p>
+  <strong>Name:</strong>
+  <%=h @campaign.name %>
+</p>
+<p>
+  <strong>Description:</strong>
+  <%=h @campaign.description %>
+</p>
+<p>
+  <strong>Target:</strong>
+  <%=h @campaign.target %>
+</p>
+<ul>
+  <% for canned_tweet in @campaign.canned_tweets %>
+    <li><%=h canned_tweet.message %></li>
+  <% end %>
+</ul>
+<p>
+  <%= link_to "Edit", edit_campaign_path(@campaign) %> |
+  <%= link_to "Destroy", @campaign, :confirm => 'Are you sure?', :method => :delete %> |
+  <%= link_to "View All", campaigns_path %>
+</p>
