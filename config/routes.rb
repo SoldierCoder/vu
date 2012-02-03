@@ -1,4 +1,6 @@
 Vu::Application.routes.draw do
+  match "/auth/twitter/callback" => "sessions#create"
+  match "/signout" => "sessions#destroy", :as => :signout
   resources :campaigns
 
   # The priority is based upon order of creation:
