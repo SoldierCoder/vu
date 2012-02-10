@@ -1,7 +1,8 @@
 source 'http://rubygems.org'
 
 gem 'rails', '3.0.1'
-
+gem 'rake', '~> 0.9.2.2' 
+#gem "rdoc", '~> 3.12' 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
@@ -12,6 +13,9 @@ gem 'omniauth-twitter'
 gem 'rack'
 gem 'sinatra'
 gem 'twitter'
+#gem 'daemons'
+gem 'delayed_job_active_record'
+
 
 
 group :development do

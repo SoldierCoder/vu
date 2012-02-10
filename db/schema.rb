@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120203025933) do
+ActiveRecord::Schema.define(:version => 20120207055316) do
 
   create_table "campaigns", :force => true do |t|
     t.string   "name"
@@ -23,6 +23,16 @@ ActiveRecord::Schema.define(:version => 20120203025933) do
   create_table "canned_tweets", :force => true do |t|
     t.integer  "campaign_id"
     t.text     "message"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "messages", :force => true do |t|
+    t.integer  "campaign_id"
+    t.integer  "user_id"
+    t.integer  "times"
+    t.string   "interval"
+    t.text     "tweet"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
